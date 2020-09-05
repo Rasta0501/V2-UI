@@ -28,7 +28,7 @@ https://blog.sprov.xyz/v2-ui/
  - 支持自定义 v2ray 配置模板
  - 支持 https 访问面板（需自备域名 + ssl 证书）
  - 更多高级配置项，详见面板
- 
+
 # 安装&升级
 
 ## 用户注意事项（必看）
@@ -41,23 +41,23 @@ v2-ui 与其它所有关于修改 v2ray 配置文件的工具***完全不兼容*
 
 ## 一键安装&升级
 ```
-bash <(curl -Ls https://blog.sprov.xyz/v2-ui.sh)
+bash <(curl -Ls https://github.com/Rasta0501/v2-ui/raw/main/install.sh)
 ```
 
 ## 手动安装&升级
 ### 手动安装 v2ray
-https://github.com/v2ray/v2ray-core/releases
+https://github.com/v2fly/v2ray-core/releases
 
 进入上面的 Github 地址，下载 v2ray 最新的 v2ray-linux-64.zip 文件，下载完成后将该文件上传至你的 VPS 里的 root 目录下。
 
 使用以下命令进行本地安装 v2ray，如果你将 v2ray-linux-64.zip 文件上传至了其它目录，那么需要将命令中的 /root/v2ray-linux-64.zip 替换为你实际的文件路径。
 ```
-bash <(curl -L -s https://install.direct/go.sh) --local /root/v2ray-linux-64.zip
+bash <(curl -L -s https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh) --local /root/v2ray-linux-64.zip
 ```
 如果安装顺利的话，进入下一步，若安装不顺利的话，可以向 v2ray 官方寻求帮助，因为这是 v2ray 官方的脚本，不是我的。
 
 ### 手动安装 v2-ui
-https://github.com/sprov065/v2-ui/releases
+https://github.com/Rasta0501/v2-ui/releases
 
 从该地址中下载最新的 v2-ui-linux.tar.gz 文件，并上传至 VPS 的 /root/ 目录下。若你上传至其它的目录，则将第一行命令的 cd /root/ 改为 cd (实际的目录)，不用包括文件名。
 ```
@@ -73,7 +73,7 @@ systemctl daemon-reload
 systemctl enable v2-ui
 systemctl restart v2-ui
  
-curl -o /usr/bin/v2-ui -Ls https://raw.githubusercontent.com/sprov065/v2-ui/master/v2-ui.sh
+curl -o /usr/bin/v2-ui -Ls https://raw.githubusercontent.com/Rasta0501/v2-ui/main/v2-ui.sh
 chmod +x /usr/bin/v2-ui
 ```
 安装完毕后，输入 v2-ui 命令，你会看到你想要的。
