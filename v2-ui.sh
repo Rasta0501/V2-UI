@@ -90,7 +90,7 @@ before_show_menu() {
 }
 
 install() {
-    bash <(curl -Ls https://blog.sprov.xyz/v2-ui.sh)
+    bash <(curl -Ls https://raw.githubusercontent.com/Rasta0501/v2-ui/main/install.sh)
     if [[ $? == 0 ]]; then
         if [[ $# == 0 ]]; then
             start
@@ -109,7 +109,7 @@ update() {
         fi
         return 0
     fi
-    bash <(curl -Ls https://blog.sprov.xyz/v2-ui.sh)
+    bash <(curl -Ls https://raw.githubusercontent.com/Rasta0501/v2-ui/main/install.sh)
     if [[ $? == 0 ]]; then
         echo -e "${green}更新完成，已自动重启面板${plain}"
         exit
@@ -298,7 +298,7 @@ install_bbr() {
 }
 
 update_shell() {
-    wget -O /usr/bin/v2-ui -N --no-check-certificate https://github.com/sprov065/v2-ui/raw/master/v2-ui.sh
+    wget -O /usr/bin/v2-ui -N --no-check-certificate https://github.com/Rasta0501/v2-ui/raw/main/v2-ui.sh
     if [[ $? != 0 ]]; then
         echo ""
         echo -e "${red}下载脚本失败，请检查本机能否连接 Github${plain}"
@@ -310,7 +310,7 @@ update_shell() {
 }
 
 update_v2ray() {
-    bash <(curl -L -s https://install.direct/go.sh)
+    bash <(curl -L -s https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh)
     if [[ $? != 0 ]]; then
         echo ""
         echo -e "${red}更新 v2ray 失败，请自行检查错误信息${plain}"
